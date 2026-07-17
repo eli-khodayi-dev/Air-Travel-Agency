@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *, *::before, *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+            body {
+                  min-height:100vh;
+                  background: #ffffff;
+}
+.meno{
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      width: 100%;
+      height: 50px;
+      list-style: none;
+      /* padding-right: 100px; */
+      position: relative;
+      padding: 0 20px;
+      /* margin-top: 30px; */
+      background-color: #07013a;
+      z-index: 1000;
+      >li{
+            
+            &:hover{
+                  
+                  >a{
+                        background-color:rgb(242, 240, 240);
+                        color: #07013a;
+                  }
+                  
+            
+                  >ul{
+                        opacity: 1;
+                        visibility: visible;
+                  }
+            
+            }
+            
+            >ul{
+                  position: absolute;
+                  width: 15%;
+                  list-style: none;
+                  left: 35%;
+                  top: 130%;
+                  opacity: 0;
+                  visibility: hidden;
+                  transition: 1s;
+                  border-radius: 5px;
+                  background-color: rgb(255, 255, 255);
+                  /* box-shadow: 10px 8px 10px rgb(7, 7, 7); */
+                  >li{
+                        
+                        overflow: hidden;
+                        padding: 15px 10px;
+                        /* box-shadow: 1px 0 5px rgb(79, 79, 79) , -1px 0 5px rgb(52, 52, 52); */
+                        /* border-radius: 5px; */
+                        transition: 1s;
+                        &:hover{
+                              background-color: #07013a;
+                              >a{
+                                    color: white;
+                              }
+                        }
+                        
+                        
+                        >a{
+                              text-decoration: none;
+                              color: rgb(10, 10, 10);
+                              font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                              font-size: 18px;
+                              padding: 10px;
+                              transition: 1s;
+                              
+                              /* background-color: aquamarine; */
+                        }
+
+                  }
+            }
+            >a{
+                  text-decoration: none;
+                  font-size: 20px;
+                  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                  padding: 20px 40px;
+                  /* border: 1px solid rgb(53, 53, 53); */
+                  /* background-color: brown; */
+                  color: white;
+                  transition: 1s;
+            }
+            
+      }
+      .mega{
+            position: absolute;
+            width: 80%;
+            left: 7%;
+            padding: 20px;
+            display: flex;
+            gap: 30px;
+            z-index: 1000;
+            >ul{
+                  width: 600px;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                  >li{
+                        padding: 15px;
+                        /* background-color: rgb(27, 26, 26); */
+                        box-shadow: 1px 0 5px rgb(52, 52, 52) , -1px 0 5px rgb(52, 52, 52);
+                        /* margin: 10px; */
+                        border-radius: 5px;
+                        >a{
+                              text-decoration: none;
+                              font-size: 18px;
+                        }
+                        
+                  }
+            }
+            >p{
+                  line-height: 40px;
+                  justify-content:center;
+                  align-content: center;
+            }
+
+            *{
+                  color: rgb(6, 6, 6);
+                  list-style: none;
+            }
+      }
+}
+
+.section{
+      width: 100%;
+      background-image: url(imge/bagrand-top.jpg);
+      background-size: cover;
+      height: 100vh;
+      padding: 10px 70px;
+      justify-content: baseline;
+      
+      align-items: center;
+      display: flex;
+      gap: 30px;
+      position: relative;
+      z-index: 1;
+      background-position: center;
+      &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.825);
+            z-index: -1;
+            backdrop-filter:blur(2px);
+      }
+      >.text{
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            /* background-color: blueviolet; */
+            height: 70%;
+            width: 70%;
+            >*{
+                  margin: 10px 0;
+            }
+            >h2{
+                  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                  font-size: 70px;
+                  color: rgba(235, 216, 145, 0.526);
+
+            }
+            >p{
+                  font-family: Arial, Helvetica, sans-serif;
+                  font-size: 20px;
+                  color: rgb(217, 214, 214);
+                  line-height: 30px;
+                  text-align: justify;
+            }
+            >button{
+                  background-color: rgb(0, 0, 0);
+                  color: rgb(225, 225, 225);
+                  font-family: none;
+                  font-size: 25px;
+                  padding: 10px;
+                  border: 1px solid rgb(7, 28, 133);
+                  box-shadow: 1px 1px black;
+                  border-radius: 5px;
+
+            }
+      }
+      >.grid{
+            /* padding: 0 50px; */
+            width: 700px;
+            height: 500px;
+            /* border: 1px solid red; */
+            display: grid;
+            gap: 10px 10px;
+            grid-template-areas: "box1 box2 box3"
+                                 "box4 box5 box6"
+                                 "box7 box8 box9";
+            &:hover{
+                    display: grid;
+                    gap: 0px 0px;  
+                    >div{
+                        border-radius: 0px;
+                        border: 0px;
+                    }
+
+                  }  
+            transition: 2s;                         
+
+            >div{
+                  border: 1px solid rgb(242, 242, 242);
+                  color: rgba(255, 255, 255, 0);
+                  width: 240px;
+                  height: auto;
+                  border-radius: 10px;
+                  transition: 1s;
+                  &:nth-of-type(1){
+                  grid-area: box1;
+                  background-image: url(imge/11.jpg);
+                  }
+                  &:nth-of-type(2){
+                  grid-area: box2;
+                  background-image: url(imge/112.jpg);
+                  }
+                  &:nth-of-type(3){
+                  grid-area: box3;
+                  background-image: url(imge/113.jpg);
+                  }
+                  &:nth-of-type(4){
+                  grid-area: box4;
+                  background-image: url(imge/114.jpg);
+                  }
+                  &:nth-of-type(5){
+                  grid-area: box5;
+                  background-image:url(imge/12.jpg);
+                  }
+                  &:nth-of-type(6){
+                  grid-area: box6;
+                  background-image: url(imge/115.jpg);
+                  }
+                  &:nth-of-type(7){
+                  grid-area: box7;
+                  background-image: url(imge/116.jpg);
+                  }
+                  &:nth-of-type(8){
+                  grid-area: box8;
+                  background-image: url(imge/117.jpg);
+                  }
+                  &:nth-of-type(9){
+                  grid-area: box9;
+                  background-image: url(imge/118.jpg);
+                  }
+            }
+            
+
+      }
+}
+.sec{
+      display: flex;
+      margin: 10px auto;
+      width: 90%;
+      /* background-color: #07013a; */
+      justify-content: center;
+      gap: 65px;
+}
+/* /////box 3d//// */
+.box{
+      width: 270px;
+      height: 400px;
+      background-color: rgb(255, 255, 255);
+      border: 1px solid black;
+      transform-style: preserve-3d;
+      position: relative;
+      left: 0;
+      top: 0;
+      transition: 2s;
+      border-radius: 10PX;
+      margin-bottom: 50px;
+      &::after{
+            content: '';      
+            display: flex;
+            width: 10PX;
+            height: 100%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 10PX;
+            transform: rotateY(-90deg);
+            transform-origin: left;
+            background-image: repeating-linear-gradient(to right,rgb(63, 63, 63) 2%, white 1%, );
+      }
+      &:hover{
+            transform:perspective(400px) rotateY(180deg) ;
+      }
+      >figure{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 10PX;
+            
+            >h1{
+                  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                  font-size: 35px;
+                  text-transform: uppercase;
+                  
+                  
+            }
+            .icons{
+                  display: flex;
+                  gap: 5px;
+                  justify-content: center;
+                  text-align: center;
+                  padding: 10px;
+            }
+            >img{
+                  width: 100%;
+                  height: 50%;
+                  border-radius: 10px 10px 0 0;
+            }
+            >p{
+                  color: black;
+                  font-family: none;
+                  font-size: 20px;
+                  justify-content: center;
+                  text-align: center;
+                  padding:  10px 10px 0 10px;
+            }
+            >button{
+                  background-color: black;
+                  border: 0px solid;
+                  border-radius: 5px;
+                  padding: 10px 40px;
+                  display: block;
+                  margin: 0 auto;
+                  margin-top: 20px;
+                  >a{
+                        color: white;
+                        font-family: none;
+                        font-size: 20px;
+                        text-decoration: none;
+                  }
+            }
+            &:nth-of-type(1){
+                  transform: scaleX(-1);
+
+            }
+            &:nth-of-type(2){
+                  transform: scaleX(1) translateZ(10px);
+                  background: #ebd891;
+background: radial-gradient(circle, rgba(235, 216, 145, 0.8) 0%, rgba(29, 37, 102, 1) 100%);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+
+            }
+      }
+
+}
+.h{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+      margin: 50px 0px;
+      >div{
+            width:30%;
+            height: 1px;
+            background-color: #07013a;
+      }
+      >h1{
+            font-family: none;
+            font-size: 40px;
+            color: #575002;
+            padding: 10px 30px;
+            text-shadow: 10px 0 10px rgb(70, 69, 69);
+
+      }
+}
+.hotel{
+      display: flex;
+      width: 90%;
+      margin: 20px auto;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding-bottom: 50px;
+      /* background-color: #575002; */
+      >div{
+            width: 20%;
+            height: auto;
+            background-color: #ebd891b1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(94, 103, 70, 0.475);
+            transition: 2s;
+            &:hover{
+                  transform: scaleY(1.01);
+                  >figure{
+                        &::before{
+                              opacity: 1;
+                        }
+                        line-height: 0;
+                        >.rotitr{
+                              >span{
+                                    opacity: 1;
+                                    z-index: 2;
+                              }
+                        }
+                  }
+            }
+            >figure{
+                  position: relative;
+                  /* transition: 3s; */
+                  &::before{
+                       content: '';
+                       position: absolute;
+                       top: 0;
+                       left: 0;
+                       width: 100%;
+                       height: 100%;
+                       background: #ebd891;
+background: radial-gradient(circle, rgba(235, 216, 145, 0.526) 0%, rgba(8, 12, 44, 0.433) 100%);
+                       z-index: 1;
+                       backdrop-filter:blur(2px);
+                       border-radius: 10px 10px 0 0;
+                       opacity: 0;
+                       transition: 1s;
+                       
+                        }
+                  >img{
+                        width: 100%;
+                        height: 190PX;
+                        background-size: cover;
+                        border-radius: 10px 10px 0 0;
+                        
+                  }
+            
+                  
+            }
+            >figcaption{
+                  /* padding: 10px; */
+                  width: 100%;
+                  padding: 0 10px;
+                        >h1{
+                              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                              font-size: 20px;
+                              /* color: rgb(38, 38, 38); */
+                        }
+                        *{
+                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                              /* font-size: 20px; */
+                              color: rgb(38, 38, 38);  
+                        }
+                        >span{
+                              font-size: 18px;
+                              display: block;
+                              direction: rtl;
+                              padding-top: 10px;
+                        }
+            } 
+            >div{
+                  >span{
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        font-size: 18px;
+                        color: #575002;
+                        display: block;
+                        padding: 10px;
+                  }
+            }     
+
+      }
+
+}
+.h1_section{
+      width: 90%;
+      margin: 30px auto;
+      >div{
+            width: 100%;
+            height: 2px;
+            background-color: #07013a6a;
+      }
+      
+      >h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #07013ad6;
+            font-size: 40px;
+            direction: ltr;
+      }
+}
+.rotitr{
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #07013a;
+      /* margin-top: -50px; */
+      
+      >span{
+            margin-top: -180px;
+            font-size: 25px;
+            color: rgba(232, 232, 229, 0.699);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            opacity: 0;
+            transition: 2s;
+
+      }
+
+}
+.saport{
+      width: 100%;
+      height: 300px;
+      margin: 150px 0px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      >div{
+            display: flex;
+            flex-flow: column;
+            gap: 20px;
+            /* background-color: #07013a; */
+            &:nth-of-type(1){ 
+                  width: 50%;
+                  height: auto;
+                  padding-left: 50px;
+                  /* background-color: #ebd891; */
+                  >h1{
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        font-size: 50px;
+                        color: #07013ad3;
+                        text-transform: uppercase;
+                        transition: 2s;
+                        text-shadow: 1px 1px 1px black, 2px 2px 1px #ebd891, 3px 3px 1px black,4px 4px 1px rgb(48, 47, 47);
+                        &:hover{
+                              text-shadow: 0px 0px 0px ;
+                        }
+                  }
+                  >p{
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        font-size: 20px;
+                        color: #060606af;
+                        justify-content: center;
+                        align-items: center;
+                        line-height: 40px;
+                        
+                  }
+                  >form{
+                        background-color: #07013a;
+                        padding: 20px;
+                        border-radius: 50px;
+                        display: flex;
+                        gap: 10px;
+                        
+                        >label{
+                              font-size: 20px;
+                              font-family: none;
+                              color: #ebd891;
+                              text-transform: capitalize;
+                        }
+                        >input{
+                              border-radius: 50px;
+                              border: 1px solid rgb(113, 115, 5);
+                              width: 170px;
+                              height: 30px;
+                              outline: none;
+                              padding-left: 10px;
+                        }
+
+                        .button{
+                              margin-left: 25px;
+                              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                              font-size: 20px;
+                              height: 31px;
+                              border: 0px;
+                              background-color: #ebd891;
+                              padding-left: 0px;
+                              
+                        }
+                        
+                  }
+
+            }
+            &:nth-of-type(2){
+                  width: 30%;
+                  position: relative;
+                  overflow: hidden;
+                  height: 430px;
+                  
+                  >figure{
+                              overflow: hidden;
+                        >img{
+                              &:nth-of-type(1){
+                              width: 95%;
+                              height: auto;
+                              justify-content: center;
+                              align-items: center;
+                              position: absolute;
+                              top: 0;
+                              left: 3%;
+                        
+                        }
+                        &:nth-of-type(2){
+                              width: 70%;
+                              position: absolute;
+                              justify-content: center;
+                              align-items: center;
+                              top: 30%;
+                              left: 5%;
+                              z-index: 1000;
+                              transition-duration: 3s;
+                              transform: translateX(-350px);
+                              animation: anime1 10s linear infinite;
+                              
+                          }
+                        }
+
+                  }
+                        
+
+            }
+      }
+}
+@keyframes anime1{
+      to{
+            transform: translateX(700px);
+      }
+}
+.footer_1{
+      width: 100%;
+      display: flex;
+      border-top: 1px solid rgba(170, 170, 170, 0.697);
+      padding: 20px 0;
+      >div{
+            display: flex;
+            width: 50%;
+            height: auto;
+            /* background-color: #575002; */
+            padding: 30px 0;
+            &:nth-of-type(2){
+                  width: 50%;
+                  /* background-color: #a5d535; */
+                  display: flex;
+                  gap: 20px;
+                  justify-content: center;
+                  >div{
+                        background-color: white;
+                        box-shadow: 1px 1px 10px rgb(193, 192, 192);
+                        border: 1px solid rgb(170, 168, 168);
+                        border-radius: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        flex-flow: column;
+                        gap: 15px;
+                        >span{
+                              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                              font-size: 20px;
+                              color: rgb(95, 94, 94);
+                        }
+                        .icon{
+                              font-size: 40px;
+
+                        }
+                        >h5{
+                              font-size: 18px;
+                              color: rgb(66, 66, 66);
+                              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        }
+                        
+                        &:nth-of-type(1){
+                        width: 250px;
+                        height: 200px;
+                        /* background-color: #07013a; */
+
+                        }
+                        &:nth-of-type(2){
+                        width: 250px;
+                        height: 200px;
+                        /* background-color: #252432; */
+
+                        }
+                  }
+
+            }
+            &:nth-of-type(1){
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background-image: url(imge/footer-bg.png);
+                  padding-left: 40px;
+                  >ul{
+                        width: 200px;
+                        list-style: none;
+                        /* background-color: #f1f1f3; */
+                        justify-content: center;
+                        line-height: 30px;
+                        
+                        >h5{
+                              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                              font-size: 20px;
+                              color: rgb(17, 17, 17);
+
+                        }
+
+                        >li{
+                              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                              font-size: 18px;
+                              color: rgb(66, 66, 66);
+                        }
+                  }
+
+            }
+      }
+
+}
+.link{
+      width: 85%;
+      /* background-color: #07013a; */
+      margin: 10px auto;
+      >ul{
+            display: flex;
+            gap: 70px;
+            list-style: circle;
+            >li{
+                  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                  font-size: 20px;
+                  >a{
+                        text-decoration: none;
+                        color: rgb(95, 94, 94);
+
+                  }
+            }
+      }
+}
+.box_footer{
+      width: 90%;
+      height: 100px;
+      background-color: #ebd8919e;
+      margin: 10px auto;
+      border-radius: 10px;
+      >figure{
+            width: 100%;
+            height: 90px;
+            /* background-color: #07013a; */
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-left: 20px;
+            padding-top: 5px;
+            
+            >img{ 
+                  background-color: #ffffff;
+                  border-radius: 10px;
+                  width: 70px;
+                  height: 70px;
+
+            }
+      }
+}
+.securet{
+      width: 100%;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      >p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(69, 69, 69);
+            font-size: 15px;
+
+      }
+}
+.country{
+      width: 1300px;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      /* background-color: #07013a; */
+      margin: 70px auto;
+      gap: 20px;
+      justify-content: center;
+      >div{
+            width: 300px;
+            height: 118px;
+            /* background-color: #07013a; */
+            border: 1px solid rgba(141, 139, 139, 0.577);
+            box-shadow: 1px 1px 5px rgba(47, 47, 47, 0.316);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            >figure{
+                  width: 100%;
+                  height: auto;
+                  
+                  >img{
+                        width: 55%;
+                        
+                  }
+
+            }
+            >span{
+                  color: black;
+                  display: block;
+                  position: absolute;
+                  left: 70%;
+                  
+            }
+            .icon{
+             position: absolute;
+             left: 88%;
+             font-size: 20px;
+            }
+
+
+
+      }
+}
+.titre_country{
+      width: 90%;
+      margin: 5px auto;
+      >h3{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 40px;
+            color: #07013a;
+      }
+
+}
+    </style>
+</head>
+<header>
+      <ul class="meno">
+            <li><a href="">home</a>
+            <ul class="meno1">
+                  <li><a href="">about travel</a></li>
+                  <li><a href="">ticket</a></li>
+                  <li><a href="">buy ticket</a></li>
+                  <li><a href="">toor</a></li>
+            </ul>
+            
+            
+            </li>
+            <li><a href="">tiket</a></li>
+            <li><a href="">about us</a></li>
+            <li><a href="">reserv</a></li>
+            <li><a href="">country</a>
+            <ul class="mega">
+                  <ul>
+                        <li><a href="">hiro</a></li>
+                        <li><a href="">hiro</a></li>
+                        <li><a href="">hiro</a></li>
+                        <li><a href="">hiro</a></li>
+                        <li><a href="">hiro</a></li>
+                  </ul>
+                  <ul>
+                        <li><a href="">hiro</a></li>
+                        <li><a href="">hiro</a></li>
+                        <li><a href="">hiro</a></li>
+                        <li><a href="">hiro</a></li>
+                        <li><a href="">hiro</a></li>
+                  </ul>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis aperiam vitae atque ab quo commodi culpa vel itaque voluptatem. Totam harum sequi magnam dolor beatae provident commodi sint veritatis, aliquam ea blanditiis earum. Quisquam quia id exercitationem architecto commodi culpa vel itaque voluptatem. Totam harum sequi magnam dolor beatae provident commodi sint veritatis, aliquam ea blanditiis earum. Quisquam quia id exercitationem architecto</p>
+
+            </ul>
+            
+            </li>
+            <li><a href="">toor</a></li>
+      </ul>
+       
+</header>
+      <div class="section">
+            <div class="text">
+                  <h2>travel country</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, excepturi.amet consectetur adipisicing elit. Suscipit, excepturi.i culpa vel itaque voluptatem. Totam harum sequi magnam dolor beatae provident commodi sint veritatis, aliquam ea blanditiis earum. Quisquam quia id exercitationem architecto commodi culpa vel itaque voluptatem. Totam harum sequi magnam dolor beatae provident commodi sint veritatis, aliquam ea blanditiis earum. Quisquam quia id exercitationem architecto</p>
+                  <button><a>more about</a></button>
+            </div>
+            <div class="grid">
+                  <div>1</div>
+                  <div>2</div>
+                  <div>3</div>
+                  <div>4</div>
+                  <div>5</div>
+                  <div>6</div>
+                  <div>7</div>
+                  <div>8</div>
+                  <div>9</div>
+            </div>
+            
+      </div>
+      <link rel="stylesheet" href="font/style.css">
+      <div class="h">
+            <div></div>
+            <h1>country for travel</h1>
+            <div></div>
+      </div>
+      <div class="sec">
+       <div class="box">
+      <figure>
+            <img src="imge/images.jpg" alt="akc">
+            <p>Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet..</p>
+            <div class="icons">
+                  <span class="icon-clipboard"></span>
+                  <span>23</span>
+                  <span class="icon-airplane"></span>
+                  <span>23</span>
+            </div>
+            <button><a href="">show</a></button>
+      </figure>
+      <figure>
+            <!-- <img src="IMGE/desert-tour.jpg" alt="aks"> -->
+            <h1>istanbol</h1>
+            <div class="icons">
+                  <span class="icon-airplane"></span>
+            </div>
+            <!-- <button><a href="">show</a></button> -->
+      </figure>
+</div>
+
+<div class="box">
+      <figure>
+            <img src="imge/eghypt.jpg" alt="akc">
+            <p>Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet..</p>
+            <div class="icons">
+                  <span class="icon-clipboard"></span>
+                  <span>23</span>
+                  <span class="icon-airplane"></span>
+                  <span>23</span>
+            </div>
+            <button><a href="">show</a></button>
+      </figure>
+      <figure>
+            <!-- <img src="IMGE/desert-tour.jpg" alt="aks"> -->
+            <h1>eghypt</h1>
+            <div class="icons">
+                  <span class="icon-airplane"></span>
+            </div>
+            <!-- <button><a href="">show</a></button> -->
+      </figure>
+</div>
+<div class="box">
+      <figure>
+            <img src="imge/maldive.jpg" alt="akc">
+            <p>Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet..</p>
+            <div class="icons">
+                  <span class="icon-clipboard"></span>
+                  <span>23</span>
+                  <span class="icon-airplane"></span>
+                  <span>23</span>
+            </div>
+            <button><a href="">show</a></button>
+      </figure>
+      <figure>
+            <!-- <img src="IMGE/desert-tour.jpg" alt="aks"> -->
+            <h1>maldive</h1>
+            <div class="icons">
+                  <span class="icon-airplane"></span>
+            </div>
+            <!-- <button><a href="">show</a></button> -->
+      </figure>
+</div>
+<div class="box">
+      <figure>
+            <img src="imge/bagrand-top.jpg" alt="akc">
+            <p>Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet..</p>
+            <div class="icons">
+                  <span class="icon-clipboard"></span>
+                  <span>23</span>
+                  <span class="icon-airplane"></span>
+                  <span>23</span>
+            </div>
+            <button><a href="">show</a></button>
+      </figure>
+      <figure>
+            <!-- <img src="IMGE/desert-tour.jpg" alt="aks"> -->
+            <h1>abroad</h1>
+            <div class="icons">
+                  <span class="icon-airplane"></span>
+            </div>
+            <!-- <button><a href="">show</a></button> -->
+      </figure>
+</div>
+</div>
+<div class="h1_section">
+      <h1>hotels</h1>
+      <div></div>
+</div>
+<div class="hotel">
+      <div>
+            <figure><img src="imge/hotel1.webp" alt=""><div class="rotitr"><span>motelgho</span></div></figure>
+            <figcaption><h1>Lorem ipsum dolor sit.</h1><span>5 star</span></figcaption>
+            <div><span>128000$</span></div>
+      </div>
+      <div>
+            <figure><img src="imge/hotel2.webp" alt=""><div class="rotitr"><span>motelgho</span></div></figure>
+            <figcaption><h1>Lorem ipsum dolor sit.</h1><span>5 star</span></figcaption>
+            <div><span>128000$</span></div>
+      </div>
+      <div>
+            <figure><img src="imge/hotel3.webp" alt=""><div class="rotitr"><span>motelgho</span></div></figure>
+            <figcaption><h1>Lorem ipsum dolor sit.</h1><span>5 star</span></figcaption>
+            <div><span>128000$</span></div>
+      </div>
+      <div>
+            <figure><img src="imge/hotel5.webp" alt=""><div class="rotitr"><span>motelgho</span></div></figure>
+            <figcaption><h1>Lorem ipsum dolor sit.</h1><span>5 star</span></figcaption>
+            <div><span>128000$</span></div>
+      </div>
+      <div>
+            <figure><img src="imge/hotel6.webp" alt=""><div class="rotitr"><span>motelgho</span></div></figure>
+            <figcaption><h1>Lorem ipsum dolor sit.</h1><span>5 star</span></figcaption>
+            <div><span>128000$</span></div>
+      </div>
+
+</div>
+<!-- ////SECTION  -->
+ <div class="h1_section">
+      <h1>country</h1>
+      <div></div>
+</div>
+<div class="hotel">
+      <div>
+            <figure><img src="imge/ROOS.jpg" alt=""><div class="rotitr"><span>motelgho</span></div></figure>
+            <figcaption><h1>Lorem ipsum dolor sit.</h1><span>5 star</span></figcaption>
+            <div><span>128000$</span></div>
+      </div>
+      <div>
+            <figure><img src="imge/ROOS1.jpg" alt=""><div class="rotitr"><span>motelgho</span></div></figure>
+            <figcaption><h1>Lorem ipsum dolor sit.</h1><span>5 star</span></figcaption>
+            <div><span>128000$</span></div>
+      </div>
+      <div>
+            <figure><img src="imge/ROOS3.png" alt=""><div class="rotitr"><span>motelgho</span></div></figure>
+            <figcaption><h1>Lorem ipsum dolor sit.</h1><span>5 star</span></figcaption>
+            <div><span>128000$</span></div>
+      </div>
+      <div>
+            <figure><img src="imge/ROOS4.jpg" alt=""><div class="rotitr"><span>motelgho</span></div></figure>
+            <figcaption><h1>Lorem ipsum dolor sit.</h1><span>5 star</span></figcaption>
+            <div><span>128000$</span></div>
+      </div>
+      <div>
+            <figure><img src="imge/ROOS6.jpg" alt=""><div class="rotitr"><span>motelgho</span></div></figure>
+            <figcaption><h1>Lorem ipsum dolor sit.</h1><span>5 star</span></figcaption>
+            <div><span>128000$</span></div>
+      </div>
+
+</div>
+<div class="saport">
+      <div>
+            <h1>saport buying ticket</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, optio.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, optio.</p>
+            <form action="">
+                  <label for="surname" id="surname">surname</label>
+                  <input type="text" placeholder="enter your name">
+                  <label for="tell" id="tell">tell</label>
+                  <input type="tel" placeholder="enter your name">
+                  <input type="submit" value="send" class="button">
+            </form>
+            
+
+      </div>
+      <div>
+            <figure>
+                  <img src="imge/166.png" alt="">
+                  <img src="imge/167.png" alt="">
+            </figure>
+
+      </div>
+      
+</div>
+<div class="titre_country">
+      <h3>country toor</h3>
+</div>
+<link rel="stylesheet" href="font3/style.css">
+<div class="country">
+      
+      <div>
+            <figure>
+                  <img src="imge/s1.png" alt="">
+                   
+            </figure>
+            <span>Lorem.</span>
+            <span class="icon">➡</span>
+      </div>
+      <div>
+            <figure>
+                  <img src="imge/s2.png" alt="">
+                  
+                  
+            </figure>
+             <span>Lorem.</span>
+             <span class="icon">➡</span>
+      </div>
+      <div>
+            <figure>
+                  <img src="imge/s3.png" alt="">
+                  
+                  
+            </figure>
+             <span>Lorem.</span>
+             <span class="icon">➡</span>
+      </div>
+      <div>
+            <figure>
+                  <img src="imge/s4.png" alt="">
+                  
+                  
+            </figure>
+             <span>Lorem.</span>
+             <span class="icon">➡</span>
+      </div>
+      <div>
+            <figure>
+                  <img src="imge/s5.png" alt="">
+                  
+                  
+            </figure>
+             <span>Lorem.</span>
+             <span class="icon">➡</span>
+      </div>
+      <div>
+            <figure>
+                  <img src="imge/s6.png" alt="">
+                  
+                  
+            </figure>
+             <span>Lorem.</span>
+             <span class="icon">➡</span>
+      </div>
+      <div>
+            <figure>
+                  <img src="imge/s9.png" alt="">
+                  
+                  
+            </figure>
+             <span>Lorem.</span>
+             <span class="icon">➡</span>
+      </div>
+      <div>
+            <figure>
+                  <img src="imge/s8.png" alt="">
+                  
+                  
+            </figure>
+             <span>Lorem.</span>
+             <span class="icon">➡</span>
+      </div>
+</div>
+<link rel="stylesheet" href="font2/font/style.css">
+<footer>
+      <div class="footer_1">
+      <div>
+            <ul class="footer">
+                  <h5>link footer</h5>
+                  <li>link</li>
+                  <li>link</li>
+                  <li>link</li>
+                  <li>link</li>
+                  <li>link</li>
+                  <li>link</li>
+            </ul>
+            <ul class="footer">
+                  <h5>link footer</h5>
+                  <li>link</li>
+                  <li>link</li>
+                  <li>link</li>
+                  <li>link</li>
+                  <li>link</li>
+                  <li>link</li>
+            </ul>
+            <ul class="footer">
+                  <h5>link footer</h5>
+                  <li>link</li>
+                  <li>link</li>
+                  <li>link</li>
+                  <li>link</li>
+                  <li>link</li>
+                  <li>link</li>
+            </ul>
+      </div>
+      <div>
+            <div>
+                  <span class="icon"></span>
+                  <h5>02156345</h5>
+                  <span class="text">phon number</span>
+            </div>
+            <div>
+                  <span class="icon"></span>
+                  <h5>emailinfo@gmail.com</h5>
+                  <span class="text">email</span>
+            </div>
+      </div>
+      </div>
+      <section class="link">
+            <ul>
+                  <li><a href="">link</a></li>
+                  <li><a href="">link</a></li>
+                  <li><a href="">link</a></li>
+                  <li><a href="">link</a></li>
+            </ul>
+      </section>
+      <div class="box_footer">
+            <figure>
+                  <img src="imge/551.webp" alt="">
+                  <img src="imge/552.webp" alt="">
+                  <img src="imge/553.webp" alt="">
+            </figure>
+      </div>
+      <div class="securet"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p></div>
+
+</footer>
+
+<body>
+
+</body>
+
+</html>
